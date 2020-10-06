@@ -11,5 +11,7 @@ namespace TrainingSample.Repository
     {
         IEnumerable<UserDetails> GetUserDetails();
         void GetInsertDetail(UserDetails insert);
+
+        void GetEditDetail(UserDetails insert);
     }
 }

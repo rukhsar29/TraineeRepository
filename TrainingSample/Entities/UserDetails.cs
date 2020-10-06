@@ -7,28 +7,7 @@ namespace TrainingSample.Entities
 {
     public class UserDetails
     {
-        //    public UserDetails()
-        //    {
-        //        CarDetails = new List<CarDetails>();
-        //    }
-        //    public int UserId { get; set; }
-        //    public string FullName { get; set; }
-        //    public string UserEmail { get; set; }
-        //    public string PasswordHash { get; set; }
-        //    public string CivilIdNumber { get; set; }
-        //    public string DOB { get; set; }
-        //    public string MobileNo { get; set; }
-        //    public string Address { get; set; }
-        //    public int RoleId { get; set; }
-        //    public string ProfilePic { get; set; }
-        //    public bool IsActive { get; set; }
-        //    public List<CarDetails> CarDetails { get; set; }
-        //}
-        //public class CarDetails
-        //{
-        //    public int Id { get; set; }
-        //    public string CarLicense { get; set; }
-        //}
+       
         public int UserId { get; set; }
         public string FullName { get; set; }
         public string UserEmail { get; set; }

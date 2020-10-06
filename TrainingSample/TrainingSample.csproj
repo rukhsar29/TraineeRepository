@@ -136,6 +136,7 @@
     <Compile Include="App_Start\FilterConfig.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="Controllers\IndexController.cs" />
+    <Compile Include="Entities\EditViewModel.cs" />
     <Compile Include="Entities\UserDetails.cs" />
     <Compile Include="EntityFramework\CarDetail.cs">
       <DependentUpon>UserDetailsEF.tt</DependentUpon>
@@ -185,6 +186,7 @@
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="Global.asax" />
     <Content Include="Content\Site.css" />
+    <Content Include="Scripts\UsersScripts\Add.js" />
     <Content Include="Scripts\bootstrap.js" />
     <Content Include="Scripts\bootstrap.min.js" />
     <EntityDeploy Include="EntityFramework\UserDetailsEF.edmx">

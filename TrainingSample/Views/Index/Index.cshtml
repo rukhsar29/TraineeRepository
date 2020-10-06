@@ -63,8 +63,8 @@
         Showing @Model.FirstItemOnPage to @Model.LastItemOnPage of @Model.TotalItemCount from UserDetail
     </div>
 
-    
-   
+
+
 
     <!-- Modal -->
     <div class="modal fade" id="addUser" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
@@ -76,35 +76,99 @@
                 <div class="modal-body">
                     <div class="row">
                         <div class="col-md-12">
-                            <div class="form-group">
-                                <label>Name</label>
-                                <input class="form-control" id="AName" name="AName" type="text" />
-                                <span id="nameval" class="field-validation-error"></span>
-                            </div>
+                            <form id="AddProduct" method="post" enctype="multipart/form-data">
+                                <div class="form-group">
 
-                            <div class="form-group">
-                                <label>Email</label>
-                                <input class="form-control" id="ALat" name="ALat" type="text" />
-                                <span id="latval" class="field-validation-error"></span>
-                            </div>
+                                    <label>Name</label>
+                                    <input class="form-control" id="AName" name="AName" type="text" />
+                                    <span id="nameval" class="field-validation-error"></span>
+                                </div>
 
-                            <div class="form-group">
-                                <label>Address</label>
-                                <input class="form-control" id="ALong" name="ALong" type="text" />
-                                <span id="longval" class="field-validation-error"></span>
-                            </div>
-                            <div class="form-group">
-                                <label>ProfilePic</label>
-                                <input id="image" type="file" name="ImageFile" required />
-                                <span id="longval" class="field-validation-error"></span>
-                            </div>
-                            <input type="hidden" id="action" name="action" />
+                                <div class="form-group">
+                                    <label>Email</label>
+                                    <input class="form-control" id="ALat" name="ALat" type="text" />
+                                    <span id="latval" class="field-validation-error"></span>
+                                </div>
+
+                                <div class="form-group">
+                                    <label>Address</label>
+                                    <input class="form-control" id="ALong" name="ALong" type="text" />
+                                    <span id="longval" class="field-validation-error"></span>
+                                </div>
+                                <div class="form-group">
+                                    <label>ProfilePic</label>
+                                   
+                                    <div class="div-file">
+                                        <input id="inputFile" type="file" name="ImageFile" accept="image/*" onchange="encodeImagetoBase64(this)" />
+                                    </div>
+                                    <div>
+                                        <p id="pImageBase64"></p>
+                                    </div>
+                                    <div>
+                                        <img id="image" height="150">
+                                    </div>
+                                    <span id="longval" class="field-validation-error"></span>
+                                </div>
+                                <div class="form-group">
+                                    <label>CarLicense</label>
+                                    <input class="form-control" id="cLicense" name="CarLicense" type="text" />
+                                    <span id="longval" class="field-validation-error"></span>
+                                </div>
+                                <input type="hidden" id="action" name="action" />
+                            </form>
                         </div>
                     </div>
                 </div>
                 <div class="modal-footer">
                     <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
                     <button type="submit" class="btn btn-primary" onclick="return InsertUser();">Submit</button>
+
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="modal fade" id="editUser" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h4 class="modal-title">Add/Edit User Details</h4>
+                </div>
+                <div class="modal-body">
+                    <div class="row">
+                        <div class="col-md-12">
+                            <form id="AddProduct" method="post" enctype="multipart/form-data">
+                                <div class="form-group">
+
+                                    <label>Name</label>
+                                    <input class="form-control" id="AName" name="AName" type="text" />
+                                    <span id="nameval" class="field-validation-error"></span>
+                                </div>
+
+                                <div class="form-group">
+                                    <label>Email</label>
+                                    <input class="form-control" id="ALat" name="ALat" type="text" />
+                                    <span id="latval" class="field-validation-error"></span>
+                                </div>
+
+                                <div class="form-group">
+                                    <label>Address</label>
+                                    <input class="form-control" id="ALong" name="ALong" type="text" />
+                                    <span id="longval" class="field-validation-error"></span>
+                                </div>
+                                <div class="form-group">
+                                    <label>ProfilePic</label>
+                                    <input id="image" type="file" name="ImageFile" required />
+                                    <span id="longval" class="field-validation-error"></span>
+                                </div>
+                                <input type="hidden" id="action" name="action" />
+                            </form>
+                        </div>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                    <button type="submit" class="btn btn-primary" onclick="return InsertUser();">Submit</button>
+
                 </div>
             </div>
         </div>
@@ -113,7 +177,7 @@
 </body>
 </html>
 
-
+<script src="~/Scripts/UsersScripts/Add.js"></script>
 <script src="~/Scripts/jquery-3.4.1.min.js"></script>
 <script src="~/Scripts/bootstrap.js"></script>
 <script src="~/Scripts/UsersScripts/Adduser.js"></script>
